@@ -28,7 +28,7 @@ const handleSubmit = () => {
 
     <div class="container contact-container">
       <!-- Left side: Contact details & Hours -->
-      <div class="contact-info-col">
+      <div class="contact-info-col animate-on-scroll slide-right-fade">
         <span class="info-badge">Kontak & Lokasi</span>
         <h2 class="section-title">Kunjungi <span class="text-gradient">Toko Kami</span></h2>
         <p class="section-subtitle">
@@ -77,7 +77,7 @@ const handleSubmit = () => {
       </div>
 
       <!-- Right side: Message form & Map -->
-      <div class="contact-form-col">
+      <div class="contact-form-col animate-on-scroll slide-left-fade">
         <div class="form-wrapper glass glow-card">
           <h3 class="form-title">Kirim Pertanyaan</h3>
           <p class="form-subtitle">Punya pertanyaan seputar ketersediaan stok atau klaim garansi? Hubungi kami langsung.</p>

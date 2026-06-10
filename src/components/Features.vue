@@ -27,14 +27,18 @@ const features = [
   <section id="features" class="features-section">
     <div class="container">
       <!-- Section Header -->
-      <div class="section-header">
+      <div class="section-header animate-on-scroll slide-up-fade">
         <h2 class="section-title">Mengapa Memilih <span class="text-gradient">Anom Elektronik & Gas</span>?</h2>
         <p class="section-subtitle">Kami berkomitmen memberikan pengalaman belanja barang elektronik terbaik dengan layanan unggulan.</p>
       </div>
 
       <!-- Features Grid -->
       <div class="features-grid">
-        <div v-for="(feature, index) in features" :key="index" class="feature-card glass glow-card">
+        <div 
+          v-for="(feature, index) in features" 
+          :key="index" 
+          :class="['feature-card', 'glass', 'glow-card', 'animate-on-scroll', 'slide-up-fade', 'delay-' + ((index + 1) * 100)]"
+        >
           <div class="icon-box" v-html="feature.icon"></div>
           <h3 class="feature-card-title">{{ feature.title }}</h3>
           <p class="feature-card-desc">{{ feature.description }}</p>

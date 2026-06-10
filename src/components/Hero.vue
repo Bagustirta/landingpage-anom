@@ -17,16 +17,16 @@
 
     <div class="container hero-container">
       <!-- Hero Copywriting -->
-      <div class="hero-content animate-slide-up">
-        <h1 class="hero-title">
+      <div class="hero-content">
+        <h1 class="hero-title fade-in-up" style="animation-delay: 0.1s;">
           Penyedia Elektronik, Kompor & <span class="text-gradient">Gas LPG Terpercaya</span>
         </h1>
-        <p class="hero-subtitle">
+        <p class="hero-subtitle fade-in-up" style="animation-delay: 0.25s;">
           Pusat penjualan tabung gas LPG, kompor, regulator safety, dan alat elektronik rumah tangga terlengkap di Mengwi, Bali. Kunjungi toko fisik kami untuk melihat pilihan produk secara langsung.
         </p>
 
         <!-- Bullet Highlights -->
-        <div class="hero-bullets">
+        <div class="hero-bullets fade-in-up" style="animation-delay: 0.4s;">
           <div class="bullet-item">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5 check-icon">
               <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
@@ -48,7 +48,7 @@
         </div>
 
         <!-- Call to Actions -->
-        <div class="hero-actions">
+        <div class="hero-actions fade-in-up" style="animation-delay: 0.55s;">
           <a href="#catalog" class="btn-primary">
             Pilihan Produk
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 arrow-icon">
@@ -62,7 +62,7 @@
       </div>
 
       <!-- Hero Visual Image -->
-      <div class="hero-visual">
+      <div class="hero-visual fade-in-scale" style="animation-delay: 0.3s;">
         <!-- Organic Morphing Curved Background Shapes behind the image -->
         <div class="curve-bg-1"></div>
         <div class="curve-bg-2"></div>
@@ -81,8 +81,8 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 100px;
-  padding-bottom: 140px;
+  padding-top: 160px;
+  padding-bottom: 100px;
   background-color: var(--bg);
   overflow: hidden;
 }
@@ -349,6 +349,32 @@
     margin-top: 20px;
     max-width: 440px;
     margin-inline: auto;
+  }
+}
+/* Custom Premium Entrance Animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.fade-in-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  animation: fadeInScale 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 </style>

@@ -38,7 +38,7 @@ const toggleFaq = (index) => {
   <section id="faqs" class="faqs-section">
     <div class="ambient-glow primary-glow"></div>
     <div class="container">
-      <div class="section-header">
+      <div class="section-header animate-on-scroll slide-up-fade">
         <span class="badge">Tanya Jawab</span>
         <h2 class="section-title">Pertanyaan <span class="text-gradient">Umum (FAQ)</span></h2>
         <p class="section-subtitle">Jawaban cepat seputar keamanan produk, layanan antar, dan operasional toko kami.</p>
@@ -48,8 +48,7 @@ const toggleFaq = (index) => {
         <div 
           v-for="(faq, index) in faqs" 
           :key="index" 
-          class="faq-item glass"
-          :class="{ active: faq.open }"
+          :class="['faq-item', 'glass', 'animate-on-scroll', 'slide-up-fade', 'delay-' + ((index + 1) * 100), { active: faq.open }]"
         >
           <button class="faq-question-btn" @click="toggleFaq(index)" :aria-expanded="faq.open">
             <span class="question-text">{{ faq.question }}</span>

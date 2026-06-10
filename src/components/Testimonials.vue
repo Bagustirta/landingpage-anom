@@ -2,14 +2,14 @@
   <section id="testimonials" class="testimonials-section">
     <div class="ambient-glow accent-glow"></div>
     <div class="container">
-      <div class="section-header">
+      <div class="section-header animate-on-scroll slide-up-fade">
         <span class="badge">Ulasan Pelanggan</span>
         <h2 class="section-title">Apa Kata <span class="text-gradient">Mereka?</span></h2>
         <p class="section-subtitle">Dukungan kepercayaan dari para tetangga dan pelaku usaha kuliner di Bali.</p>
       </div>
 
       <div class="testimonials-grid">
-        <div class="testimonial-card glass glow-card">
+        <div class="testimonial-card glass glow-card animate-on-scroll slide-up-fade delay-100">
           <div class="rating">
             <span v-for="n in 5" :key="n" class="star">★</span>
           </div>
@@ -25,7 +25,7 @@
           </div>
         </div>
 
-        <div class="testimonial-card glass glow-card">
+        <div class="testimonial-card glass glow-card animate-on-scroll slide-up-fade delay-200">
           <div class="rating">
             <span v-for="n in 5" :key="n" class="star">★</span>
           </div>
@@ -41,7 +41,7 @@
           </div>
         </div>
 
-        <div class="testimonial-card glass glow-card">
+        <div class="testimonial-card glass glow-card animate-on-scroll slide-up-fade delay-300">
           <div class="rating">
             <span v-for="n in 5" :key="n" class="star">★</span>
           </div>

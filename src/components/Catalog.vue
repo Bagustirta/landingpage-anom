@@ -37,14 +37,18 @@ const categories = [
   <section id="catalog" class="catalog-section">
     <div class="container">
       <!-- Section Header -->
-      <div class="section-header">
+      <div class="section-header animate-on-scroll slide-up-fade">
         <h2 class="section-title">Barang Yang <span class="text-gradient">Kami Sediakan</span></h2>
         <p class="section-subtitle">Kami menjual berbagai macam kebutuhan rumah tangga, peralatan gas, dan alat elektronik secara offline.</p>
       </div>
 
       <!-- Categories Grid -->
       <div class="categories-grid">
-        <div v-for="(cat, index) in categories" :key="index" class="category-card glass glow-card">
+        <div 
+          v-for="(cat, index) in categories" 
+          :key="index" 
+          :class="['category-card', 'glass', 'glow-card', 'animate-on-scroll', 'slide-up-fade', 'delay-' + ((index + 1) * 100)]"
+        >
           <div class="category-header">
             <!-- Illustrative Icons -->
             <div :class="['category-icon-box', cat.iconClass]">

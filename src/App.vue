@@ -33,6 +33,27 @@ const scrollToTop = () => {
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
   handleScroll(); // Initial call
+
+  // Intersection Observer for scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      } else {
+        entry.target.classList.remove('in-view');
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  // Observe all elements with .animate-on-scroll class after mounting
+  setTimeout(() => {
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+  }, 150);
 });
 
 onUnmounted(() => {

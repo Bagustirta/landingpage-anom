@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear();
       <div class="footer-info-col">
         <a href="#" class="footer-logo">
           <img src="/images/anom_logo.webp" alt="Anom Logo" class="logo-img" />
-          <span class="logo-text">Anom<span class="highlight">Elektronik & Gas</span></span>
+          <span class="logo-text">Anom<span class="highlight">Elektronik</span></span>
         </a>
         <p class="footer-desc">
           Pusat penyedia tabung gas LPG resmi Pertamina, kompor gas standar SNI, serta peralatan elektronik rumah tangga berkualitas tinggi di Bali.
@@ -20,10 +20,10 @@ const currentYear = new Date().getFullYear();
       <div class="footer-links-col">
         <h4>Navigasi</h4>
         <ul class="footer-links">
-          <li><a href="#hero">Beranda</a></li>
-          <li><a href="#catalog">Katalog</a></li>
-          <li><a href="#features">Keunggulan</a></li>
-          <li><a href="#location">Lokasi Toko</a></li>
+          <li><router-link to="/">Beranda</router-link></li>
+          <li><router-link to="/#catalog">Katalog</router-link></li>
+          <li><router-link to="/#features">Keunggulan</router-link></li>
+          <li><router-link to="/#location">Lokasi Toko</router-link></li>
         </ul>
       </div>
 
@@ -31,10 +31,11 @@ const currentYear = new Date().getFullYear();
       <div class="footer-links-col">
         <h4>Layanan Kami</h4>
         <ul class="footer-links">
-          <li><a href="#catalog">Tabung Gas LPG</a></li>
-          <li><a href="#catalog">Kompor & Regulator</a></li>
-          <li><a href="#catalog">Elektronik Dapur</a></li>
-          <li><a href="#catalog">Alat Rumah Tangga</a></li>
+          <li><router-link to="/#catalog">Tabung Gas LPG</router-link></li>
+          <li><router-link to="/#catalog">Kompor & Regulator</router-link></li>
+          <li><router-link to="/#catalog">Elektronik Dapur</router-link></li>
+          <li><router-link to="/#catalog">Alat Rumah Tangga</router-link></li>
+          <li><router-link to="/cek-garansi" class="highlight-link">Cek Garansi Servis</router-link></li>
         </ul>
       </div>
 
@@ -146,15 +147,22 @@ const currentYear = new Date().getFullYear();
   gap: 12px;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-links .highlight-link {
   font-size: 0.9rem;
   color: var(--text-muted);
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-links .highlight-link:hover {
   color: var(--primary);
   padding-left: 4px;
   transition: all var(--transition-fast);
+}
+
+.footer-links .highlight-link {
+  font-weight: 700;
+  color: var(--primary);
 }
 
 .social-row {

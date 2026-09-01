@@ -63,12 +63,8 @@
 
       <!-- Hero Visual Image -->
       <div class="hero-visual fade-in-scale" style="animation-delay: 0.3s;">
-        <!-- Organic Morphing Curved Background Shapes behind the image -->
-        <div class="curve-bg-1"></div>
-        <div class="curve-bg-2"></div>
-        
         <div class="image-wrapper">
-          <img src="/images/hero_localized_electronics_v3.png" alt="Premium Electronics Anom" class="hero-img animate-float" />
+          <img src="/images/hero_localized_electronics_v3.png" alt="Premium Electronics Anom" class="hero-img" />
         </div>
       </div>
     </div>
@@ -253,71 +249,27 @@
   padding: 40px 0;
 }
 
-/* Organic curved background shapes - "lengkung-lengkung" meta design */
-.curve-bg-1 {
-  position: absolute;
-  width: 100%;
-  max-width: 440px;
-  height: 440px;
-  background: linear-gradient(135deg, #ffe8d6 0%, #ffcca8 100%);
-  border-radius: 43% 57% 38% 62% / 55% 43% 57% 45%;
-  z-index: 0;
-  animation: morph 8s ease-in-out infinite;
-  opacity: 0.7;
-}
-
-.curve-bg-2 {
-  position: absolute;
-  width: 100%;
-  max-width: 400px;
-  height: 400px;
-  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
-  border-radius: 50% 50% 30% 70% / 50% 60% 40% 60%;
-  z-index: 1;
-  opacity: 0.15;
-  animation: morph-reverse 10s ease-in-out infinite;
-}
-
 .image-wrapper {
   position: relative;
   z-index: 2;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: transform var(--transition-normal);
 }
 
 .image-wrapper:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
 }
 
 .hero-img {
   width: 100%;
-  max-width: 420px;
+  max-width: 500px;
   height: auto;
   display: block;
-  filter: drop-shadow(0 15px 30px rgba(15, 23, 42, 0.12));
-}
-
-@keyframes morph {
-  0% {
-    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-  }
-  50% {
-    border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%;
-  }
-  100% {
-    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-  }
-}
-
-@keyframes morph-reverse {
-  0% {
-    border-radius: 50% 50% 30% 70% / 50% 60% 40% 60%;
-  }
-  50% {
-    border-radius: 30% 70% 70% 30% / 50% 30% 70% 50%;
-  }
-  100% {
-    border-radius: 50% 50% 30% 70% / 50% 60% 40% 60%;
-  }
+  mix-blend-mode: multiply;
+  filter: contrast(1.05); /* Slight contrast bump to offset multiply dullness */
 }
 
 /* Responsive Styles */
@@ -347,8 +299,13 @@
 
   .hero-visual {
     margin-top: 20px;
-    max-width: 440px;
+    max-width: 460px;
     margin-inline: auto;
+  }
+
+  .hero-img {
+    width: 100%;
+    margin: 0;
   }
 }
 /* Custom Premium Entrance Animations */

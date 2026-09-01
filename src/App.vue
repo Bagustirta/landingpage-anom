@@ -1,12 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import Navbar from './components/Navbar.vue';
-import Hero from './components/Hero.vue';
-import Features from './components/Features.vue';
-import Catalog from './components/Catalog.vue';
-import Testimonials from './components/Testimonials.vue';
-import Faqs from './components/Faqs.vue';
-import AboutContact from './components/AboutContact.vue';
 import Footer from './components/Footer.vue';
 
 const showScrollTop = ref(false);
@@ -34,26 +28,7 @@ onMounted(() => {
   window.addEventListener('scroll', handleScroll);
   handleScroll(); // Initial call
 
-  // Intersection Observer for scroll animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-      } else {
-        entry.target.classList.remove('in-view');
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  });
 
-  // Observe all elements with .animate-on-scroll class after mounting
-  setTimeout(() => {
-    document.querySelectorAll('.animate-on-scroll').forEach(el => {
-      observer.observe(el);
-    });
-  }, 150);
 });
 
 onUnmounted(() => {
@@ -73,12 +48,7 @@ onUnmounted(() => {
 
     <!-- Main Content Area -->
     <main class="main-content">
-      <Hero />
-      <Features />
-      <Catalog />
-      <Testimonials />
-      <Faqs />
-      <AboutContact />
+      <router-view></router-view>
     </main>
 
     <!-- Footer Area -->

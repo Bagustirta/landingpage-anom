@@ -48,19 +48,24 @@ const toggleFaq = (index) => {
         <div 
           v-for="(faq, index) in faqs" 
           :key="index" 
-          :class="['faq-item', 'glass', 'animate-on-scroll', 'slide-up-fade', 'delay-' + ((index + 1) * 100), { active: faq.open }]"
+          class="animate-on-scroll slide-up-fade"
+          :class="'delay-' + ((index + 1) * 100)"
         >
-          <button class="faq-question-btn" @click="toggleFaq(index)" :aria-expanded="faq.open">
-            <span class="question-text">{{ faq.question }}</span>
-            <span class="faq-icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="faq-chevron">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-              </svg>
-            </span>
-          </button>
-          
-          <div class="faq-answer-wrapper" :style="{ maxHeight: faq.open ? '200px' : '0' }">
-            <p class="faq-answer-text">{{ faq.answer }}</p>
+          <div :class="['faq-item', 'glass', { active: faq.open }]">
+            <button class="faq-question-btn" @click="toggleFaq(index)" :aria-expanded="faq.open">
+              <span class="question-text">{{ faq.question }}</span>
+              <span class="faq-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="faq-chevron">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </span>
+            </button>
+            
+            <div class="faq-answer-wrapper" :class="{ 'is-open': faq.open }">
+              <div class="faq-answer-inner">
+                <p class="faq-answer-text">{{ faq.answer }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -182,7 +187,16 @@ const toggleFaq = (index) => {
 }
 
 .faq-answer-wrapper {
-  transition: max-height var(--transition-normal) ease-in-out;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-in-out;
+}
+
+.faq-answer-wrapper.is-open {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer-inner {
   overflow: hidden;
 }
 

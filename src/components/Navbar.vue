@@ -16,17 +16,14 @@ const closeMobileMenu = () => {
   <header class="navbar-wrapper glass">
     <div class="container navbar-container">
       <!-- Logo Section -->
-      <a href="#" class="logo-area" @click="closeMobileMenu">
+      <router-link to="/" class="logo-area" @click="closeMobileMenu">
         <img src="/images/anom_logo.webp" alt="Anom Logo" class="logo-img" />
-        <span class="logo-text">Anom<span class="highlight">Elektronik</span></span>
-      </a>
+      </router-link>
 
       <!-- Desktop Navigation Menu -->
       <nav class="desktop-nav">
-        <a href="#hero" class="nav-link">Home</a>
-        <a href="#catalog" class="nav-link">Produk</a>
-        <a href="#features" class="nav-link">Keunggulan</a>
-        <a href="#location" class="nav-link">Kontak & Lokasi</a>
+        <router-link to="/" class="nav-link">Home</router-link>
+        <router-link to="/cek-garansi" class="nav-link">Cek Garansi</router-link>
       </nav>
 
       <div class="nav-actions">
@@ -47,10 +44,8 @@ const closeMobileMenu = () => {
     <!-- Mobile Navigation Panel -->
     <div class="mobile-nav-panel" :class="{ 'is-open': isMobileMenuOpen }">
       <nav class="mobile-nav">
-        <a href="#hero" class="mobile-link" @click="closeMobileMenu">Home</a>
-        <a href="#catalog" class="mobile-link" @click="closeMobileMenu">Pilihan Produk</a>
-        <a href="#features" class="mobile-link" @click="closeMobileMenu">Keunggulan kami</a>
-        <a href="#location" class="mobile-link" @click="closeMobileMenu">Hubungi kami</a>
+        <router-link to="/" class="mobile-link" @click="closeMobileMenu">Home</router-link>
+        <router-link to="/cek-garansi" class="mobile-link" @click="closeMobileMenu">Cek Garansi</router-link>
       </nav>
     </div>
   </header>
@@ -88,9 +83,10 @@ const closeMobileMenu = () => {
 }
 
 .logo-img {
-  height: 32px;
-  width: 32px;
+  height: 48px;
+  width: auto;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .highlight {
@@ -134,6 +130,7 @@ const closeMobileMenu = () => {
   display: flex;
   align-items: center;
   gap: 16px;
+  flex-shrink: 0;
 }
 
 .icon-btn {
@@ -244,7 +241,7 @@ const closeMobileMenu = () => {
   }
   
   .hamburger-btn {
-    display: flex;
+    display: none !important;
   }
 
   .open-top {
@@ -262,6 +259,21 @@ const closeMobileMenu = () => {
 
   .btn-whatsapp span {
     display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img {
+    height: 36px;
+  }
+
+  .btn-whatsapp {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  .nav-actions {
+    gap: 10px;
   }
 }
 </style>

@@ -29,48 +29,51 @@ const handleSubmit = () => {
     <div class="container contact-container">
       <!-- Left side: Contact details & Hours -->
       <div class="contact-info-col animate-on-scroll slide-right-fade">
-        <span class="info-badge">Kontak & Lokasi</span>
-        <h2 class="section-title">Kunjungi <span class="text-gradient">Toko Kami</span></h2>
-        <p class="section-subtitle">
-          Kami siap menyambut Anda langsung di toko fisik kami untuk melihat dan mencoba produk secara langsung. Dapatkan rekomendasi terbaik dari tim ahli kami.
-        </p>
+        <div class="info-wrapper">
+          <span class="info-badge">Kontak & Lokasi</span>
+          <h2 class="section-title">Kunjungi <span class="text-gradient">Toko Kami</span></h2>
+          <p class="section-subtitle">
+            Kami siap menyambut Anda langsung di toko fisik kami untuk melihat dan mencoba produk secara langsung. Dapatkan rekomendasi terbaik dari tim ahli kami.
+          </p>
 
-        <!-- Details grid -->
-        <div class="info-details-list">
-          <div class="info-detail-item">
-            <div class="info-icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-              </svg>
+          <!-- Details grid -->
+          <div class="info-details-list">
+            <div class="info-detail-item">
+              <div class="info-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                </svg>
+              </div>
+              <div class="info-text-box">
+                <h4>Alamat Toko</h4>
+                <p>Jl. Raya Kapal No.17, Kec. Mengwi, Kabupaten Badung, Bali 80351</p>
+              </div>
             </div>
-            <div class="info-text-box">
-              <h4>Alamat Toko</h4>
-              <p>Jl. Raya Kapal No.17 , Kec. Mengwi, Kabupaten Badung, Bali 80351</p>
-            </div>
-          </div>
 
-          <div class="info-detail-item">
-            <div class="info-icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
+            <div class="info-detail-item">
+              <div class="info-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+              </div>
+              <div class="info-text-box">
+                <h4>Jam Operasional</h4>
+                <p>Senin - Sabtu : 09:00 - 21:00&nbsp;WIB<br>Minggu : 10:00 - 18:00&nbsp;WIB</p>
+              </div>
             </div>
-            <div class="info-text-box">
-              <h4>Jam Operasional</h4>
-              <p>Senin - Sabtu: 09:00 - 21:00 WIB<br>Minggu & Hari Libur: 10:00 - 18:00 WIB</p>
-            </div>
-          </div>
 
-          <div class="info-detail-item">
-            <div class="info-icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.824-1.432-5.117-3.725-6.579-6.579l1.293-.97c.362-.272.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-              </svg>
-            </div>
-            <div class="info-text-box">
-              <h4>Kontak Customer Service</h4>
-              <p>WhatsApp: +62 819-1384-2931<br>Email: support@anomelektronik.my.id</p>
+            <div class="info-detail-item">
+              <div class="info-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.824-1.432-5.117-3.725-6.579-6.579l1.293-.97c.362-.272.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                </svg>
+              </div>
+              <div class="info-text-box">
+                <h4>Kontak Customer Service</h4>
+                <p>WhatsApp: +62 819-1384-2931</p>
+                  <!-- <br><p>Email: support@anomelektronik.my.id</p> -->
+              </div>
             </div>
           </div>
         </div>
@@ -140,6 +143,7 @@ const handleSubmit = () => {
   gap: 60px;
   position: relative;
   z-index: 1;
+  align-items: center;
 }
 
 .contact-info-col {
@@ -147,6 +151,11 @@ const handleSubmit = () => {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.info-wrapper {
+  width: 100%;
+  padding-right: 20px;
 }
 
 .info-badge {
@@ -226,7 +235,7 @@ const handleSubmit = () => {
 
 .form-wrapper {
   width: 100%;
-  padding: 40px;
+  padding: 35px;
   border-radius: var(--radius-lg);
   text-align: left;
 }
@@ -350,18 +359,47 @@ const handleSubmit = () => {
   }
   
   .contact-info-col {
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .info-wrapper {
+    padding-right: 0;
   }
 
   .section-subtitle {
-    margin-inline: auto;
+    margin-inline: 0;
+  }
+
+  .info-details-list {
+    align-items: flex-start;
+  }
+
+  .info-detail-item {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 16px;
   }
 }
 
 @media (max-width: 480px) {
   .form-wrapper {
     padding: 24px;
+  }
+  
+  .info-text-box p {
+    font-size: 0.9rem;
+  }
+
+  .info-icon-box {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .info-icon-box svg {
+    width: 20px;
+    height: 20px;
   }
 }
 </style>

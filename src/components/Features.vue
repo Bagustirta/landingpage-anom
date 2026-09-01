@@ -28,7 +28,7 @@ const features = [
     <div class="container">
       <!-- Section Header -->
       <div class="section-header animate-on-scroll slide-up-fade">
-        <h2 class="section-title">Mengapa Memilih <span class="text-gradient">Anom Elektronik & Gas</span>?</h2>
+        <h2 class="section-title">Mengapa Memilih <span class="text-gradient">Anom Elektronik</span>?</h2>
         <p class="section-subtitle">Kami berkomitmen memberikan pengalaman belanja barang elektronik terbaik dengan layanan unggulan.</p>
       </div>
 
@@ -126,6 +126,10 @@ const features = [
   
   .feature-card {
     padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 </style>
